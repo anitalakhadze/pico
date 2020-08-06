@@ -22,6 +22,9 @@ For the purposes of our project, the model of the User consists of the following
 
 **POST** /users/authenticate:
 > Authenticate the user by finding his/her username and password in the database. If not found, return error. 
+>> JSON will look like this: 
+ * username (string)
+ * password (string)
 
 **POST** /users/register:
 > Register the user in the database by first verifying that a user with such a name does not exist and then give him/her an id. 
