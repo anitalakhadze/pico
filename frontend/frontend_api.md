@@ -22,7 +22,7 @@ For the purposes of our project, the model of the User consists of the following
 
 **POST** /users/authenticate:
 > Authenticate the user by finding his/her username and password in the database. If not found, return error. 
->> JSON will look like this: 
+> JSON will look like this: 
  * username (string)
  * password (string)
 
