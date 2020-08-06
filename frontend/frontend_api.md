@@ -20,3 +20,7 @@ For the purposes of our project, the model of the User consists of the following
 
 ## Specific Examples
 
+**POST** /users/authenticate:
+> Authenticate the user by finding his/her username and password in the database. If not found, return error. 
+
+
