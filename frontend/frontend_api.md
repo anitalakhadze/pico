@@ -11,12 +11,12 @@ Read [Rest API guide](https://www.restapitutorial.com/lessons/restquicktips.html
 ## General Model
 
 For the purposes of our project, the model of the User consists of the following properties: 
-    * id (number)
-    * username (string)
-    * password (string)
-    * firstName (string)
-    * lastName (string)
-    * token (string)
+ * id (number)
+ * username (string)
+ * password (string)
+ * firstName (string)
+ * lastName (string)
+ * token (string)
 
 ## Specific Examples
 
