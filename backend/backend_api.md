@@ -23,22 +23,58 @@ With parameters to create the entry as a JSON object like this
 >"name":"cherry",
 >}
 
-Parameters for GET are always passed in with the URL, while for POST, parameters are always passed in with JSON object.
+Pass GET parameters in *?param1=val1* format.  
+Unless specified in a URL (ex. /users/:id) a parameter 'foo' must be sent as a Json.  
+Every parameter name followed by a "?" question mark is optional.  
+Unless specified otherwise, every request returns an appropriate HTTP response (ex. 200, 404, ...).
+ [see tutorial](https://www.restapitutorial.com/lessons/httpmethods.html)
 
-## Users
+## Supported CRUD operations  
+### Users  
 
-Find particular user
+#### Find particular user
 > **GET** /users/:id
 
 returns a user object, or empty object.
 
-List users
->**GET** /users?name=:name,regex=:regex
+#### List users
+> **GET** /users?{parameters}
 
 returns an array of at most 10 matching user objects.
 
 parameters:
 
-- id: string: unique identifier of a user.
-- name: string: name of user.
-- regex: boolean: use regex to find name.
+- name?: string: name to filter users.
+
+#### Save user
+> **POST** /users
+
+parameters:
+
+- name: string: name of user (not username)
+
+returns:
+
+- id: unique identifier of a new user
+- password: password of newly created user (save it!)
+
+#### Update user
+
+> **PATCH** /users/:id
+
+parameters:
+
+- id: unique identifier of existing user
+- password: password of existing user
+- ... any other modifiable user params
+
+#### Delete user
+
+> **DELETE** /users/:id  
+
+parameters:  
+
+- id: unique identifier of existing user
+- password: password of existing user
+
+
